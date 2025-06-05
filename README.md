@@ -55,7 +55,7 @@ toko/
 ## 🛠 Panduan Instalasi
 1. **Clone repository**:
    ```bash
-   git clone [https://github.com/username/repo.git](https://github.com/RiskaHaqikaSitumorang/Tugas8_Kelompok6_PPL.git)
+   git clone (https://github.com/RiskaHaqikaSitumorang/Tugas8_Kelompok6_PPL.git)
    cd toko
    ```
 
