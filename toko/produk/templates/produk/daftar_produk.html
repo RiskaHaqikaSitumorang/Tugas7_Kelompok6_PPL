@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .nav {
+            background-color: #495057;
+            padding: 0.5rem;
+        }
+        .nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .produk-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .produk-card h3 {
+            margin-top: 0;
+            color: #343a40;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{ title }}</h1>
+    </div>
+    
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/produk/">Daftar Produk</a>
+        <a href="/kontak/">Kontak</a>
+    </div>
+    
+    <div class="content">
+        {% for produk in produk_list %}
+        <div class="produk-card">
+            <h3>{{ produk.nama }}</h3>
+            <p>Harga: Rp {{ produk.harga }}</p>
+            <p>Stok: {{ produk.stok }}</p>
+            <a href="/produk/{{ produk.id }}/" class="btn btn-info">Detail</a>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div class="footer">
+        &copy; 2023 Katalog Produk. All rights reserved.
+    </div>
+</body>
+</html>
