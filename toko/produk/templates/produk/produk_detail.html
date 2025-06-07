@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .nav {
+            background-color: #495057;
+            padding: 0.5rem;
+        }
+        .nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .produk-detail {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .produk-detail h2 {
+            color: #343a40;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{ title }}</h1>
+    </div>
+    
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/produk/">Daftar Produk</a>
+        <a href="/kontak/">Kontak</a>
+    </div>
+    
+    <div class="content">
+        <div class="produk-detail">
+            <h2>{{ produk.nama }}</h2>
+            <p><strong>Harga:</strong> Rp {{ produk.harga }}</p>
+            <p><strong>Stok Tersedia:</strong> {{ produk.stok }}</p>
+            <h4>Deskripsi Produk:</h4>
+            <p>{{ produk.deskripsi }}</p>
+            <a href="/produk/" class="btn btn-secondary">Kembali ke Daftar</a>
+        </div>
+    </div>
+    
+    <div class="footer">
+        &copy; 2023 Katalog Produk. All rights reserved.
+    </div>
+</body>
+</html>
